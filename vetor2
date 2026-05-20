@@ -1,0 +1,43 @@
+algoritmo "Vetores"
+
+var
+   vetor : vetor[1..10] de inteiro
+   i, soma : inteiro
+   media : real
+
+inicio
+
+   soma <- 0
+
+   escreval("Digite 10 numeros inteiros:")
+
+   para i de 1 ate 10 faca
+      leia(vetor[i])
+      soma <- soma + vetor[i]
+   fimpara
+
+   escreval("Elementos nos indices impares:")
+
+   para i de 1 ate 10 faca
+      se i % 2 <> 0 entao
+         escre(vetor[i], " ")
+      fimse
+   fimpara
+
+   escreval("")
+   escreval("Elementos pares:")
+
+   para i de 1 ate 10 faca
+      se vetor[i] % 2 = 0 entao
+         escre(vetor[i], " ")
+      fimse
+   fimpara
+
+   media <- soma / 10
+
+   escreval("")
+   escreval("Soma: ", soma)
+
+   escreval("Media: ", media)
+
+fimalgoritmo
