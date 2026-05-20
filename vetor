@@ -1,0 +1,33 @@
+algoritmo "OrdenarVetorDecrescente"
+
+var
+   vetor : vetor[1..10] de inteiro
+   i, j, aux : inteiro
+
+inicio
+
+   escreva("Digite 10 numeros: ")
+
+   para i de 1 ate 10 faca
+      leia(vetor[i])
+   fimpara
+
+   para i de 1 ate 10 faca
+      para j de i + 1 ate 10 faca
+
+         se vetor[i] < vetor[j] entao
+            aux <- vetor[i]
+            vetor[i] <- vetor[j]
+            vetor[j] <- aux
+         fimse
+
+      fimpara
+   fimpara
+
+   escreval("Vetor em ordem decrescente:")
+
+   para i de 1 ate 10 faca
+      escreval(vetor[i])
+   fimpara
+
+fimalgoritmo
